@@ -25,5 +25,8 @@ jobs:
       - name: pwd    
         run: pwd
 
+      - name: Install dependencies
+        run: npm install
+
       - name: npm lint
         run: npm run lint
