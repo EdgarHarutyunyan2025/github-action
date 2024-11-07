@@ -1,14 +1,16 @@
 name: CI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  my-testing:
 
-on: [push]
-  jobs:
-    my-testing:
-
-      runs-on: ubuntu-latest
-      steps:
-        name: checkout
-        - uses: actions/checkout@v4
-        - name: install deps
-          run: npm install
-        - name: start
-          run: npm run dev
+    runs-on: ubuntu-latest
+    steps:
+      name: checkout
+      - uses: actions/checkout@v4
+      - name: install deps
+        run: npm install
+      - name: start
+        run: npm run dev
