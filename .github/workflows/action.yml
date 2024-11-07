@@ -12,6 +12,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: ls dir
+        run: ls
+        run: pwd
       - name: install deps
         run: npm install
       - name: npm lint
