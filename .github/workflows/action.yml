@@ -30,3 +30,6 @@ jobs:
 
       - name: npm lint
         run: npm run lint
+
+      - name: run start
+        run: npm run dev
