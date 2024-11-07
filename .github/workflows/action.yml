@@ -4,23 +4,29 @@ on:
     branches:
       - master
 jobs:
-  my-testing:
+  my_testing:
 
     runs-on: ubuntu-latest
     steps:
       - name: list dir
-        run: ls
+        run: ls -la
+
       - name: git clone
-        run: actions/checkout@v4
+        uses: actions/checkout@v4
+
       - name: checkout
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
       - name: ls dir
-        run: ls
+        run: ls -la
+
       - name: pwd    
         run: pwd
+
       - name: install deps
         run: npm install
+
       - name: npm lint
         run: npm run lint
