@@ -8,6 +8,10 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - name: list dir
+        run: ls
+      - name: git clone
+        run: actions/checkout@v1
       - name: checkout
         uses: actions/setup-node@v4
         with:
