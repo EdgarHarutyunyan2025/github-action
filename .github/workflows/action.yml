@@ -14,6 +14,7 @@ jobs:
           node-version: 18
       - name: ls dir
         run: ls
+      - name: pwd    
         run: pwd
       - name: install deps
         run: npm install
